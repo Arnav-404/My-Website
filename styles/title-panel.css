@@ -1,0 +1,46 @@
+.title-panel {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    right: 0px;
+    top: 20px;
+    background-color: white;
+    padding: 5px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 10;
+    transition: 1s;
+    box-shadow: 2px 2px 8px 7px rgba(128, 128, 128, 0.397);
+    animation-name: title;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.title {
+    display: flex;
+    font-size: 30px;
+    margin: 0px;
+    transition: 1s;
+}
+
+.title-panel:hover > .title {
+    font-size: 35px;
+}
+.title-panel:hover {
+    top:17.5px;
+}
+@keyframes title {
+    from {right: -250px;}
+    to { right: 0px;}
+}
+
+@media only screen and (max-width: 612px) {
+    .title-panel {
+        right: -10px;
+    }
+    .title-panel:hover > .title {
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .title-panel:hover {
+        top:20px;
+    }
+}

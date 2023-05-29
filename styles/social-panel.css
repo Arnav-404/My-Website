@@ -1,0 +1,87 @@
+.socials-panel {
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   left: 0px;
+   bottom: 45px;
+   height: 80px;
+   width: 370px;
+   background-color: white;
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+   animation-name: social-panel;
+   animation-duration: 3s;
+   animation-iteration-count: 1;
+   box-shadow: 2px 2px 8px 7px rgba(82, 82, 82, 0.397);
+}
+.icon {
+    position: fixed;
+    width: 50px;
+    transition: 0.5s;
+}
+.socials {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    margin-top: 50px;
+}
+.link {
+    text-decoration:none
+}
+.discord {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: 0.5s;
+}
+.discord:hover > .icon{
+    margin-top: -20px;
+    padding-top: 10px;
+    width: 70px;
+}
+
+.instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.instagram:hover > .icon{
+    margin-top: -20px;
+    padding-top: 10px;
+    width: 70px;
+}
+.telegram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.telegram:hover > .icon{
+    margin-top: -20px;
+    padding-top: 10px;
+    width: 70px;
+}
+.github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.github:hover > .icon{
+    margin-top: -20px;
+    padding-top: 10px;
+    width: 70px;
+}
+@keyframes social-panel{
+    from {left: -300px;}
+    to {left: 0}
+}
+
+@media only screen and (max-width: 612px){
+    .socials-panel {
+        bottom: 25px;
+    }
+}

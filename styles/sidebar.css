@@ -1,0 +1,158 @@
+.left-panel {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 370px;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+    left: 0;
+    bottom: 140px;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation-name: side-panel;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes side-panel {
+    from {left: -300px;}
+    to {left: 0}
+}
+.profile-picture {
+    width: 250px;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: 5px solid black;
+    transition: 0.5s;
+    z-index: 10;
+}
+.profile-picture:hover {
+    width: 285px;
+    border: 2px solid black;
+    margin-top: -10px;
+}
+.name {
+    top:300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    cursor: default;
+    transition: 0.5s;
+}
+.name:hover {
+    font-size: 45px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.about {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+    cursor: default;
+    transition: 0.5s;
+}
+.about:hover {
+    text-decoration: underline;   
+}
+
+.describ {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    cursor: default;
+}
+.describ:hover + .arrow {
+    margin-left: 50px;
+}
+
+.arrow {
+    height: 60px;
+    width: 100px;
+    margin: 0px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.arrow:hover {
+    margin-left: 50px;
+}
+.down {
+    display: none;
+}
+
+@media only screen and (max-width: 612px){
+    body {
+        margin-bottom: 5000px;
+    }
+    .left-panel {
+        position: relative;
+        top: 0px;
+        left: 20px;
+        right: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        animation-name: panel;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+    }
+    .profile-box {
+        height: 0px;
+        width: 0px;
+    }
+    .profile-picture {
+        position: relative;
+        margin-top: 60px;
+    }
+    .name {
+        position: relative;
+        top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .about {
+        font-size: 18px;
+    }
+    
+    .describ {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        text-align: center;
+        font-weight: bold;
+        margin: 0px;
+        cursor: default;
+    }
+    
+    .arrow {
+        display: none;
+    }
+    .down {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 40px;
+        display: flex;
+        position: relative;
+        animation-name: down;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes down {
+        0% {top:-10px;}
+        50% {top: 10px;}
+        100% {top:-10px;}
+    }
+    @keyframes panel {
+        from {top: -50px;}
+        to {top:0;}
+    }
+}
